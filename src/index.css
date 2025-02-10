@@ -26,6 +26,13 @@ h1 {
   font-family: "Coiny", serif;
 }
 
+h2 {
+  font-size: 2.5em;
+  line-height: 1.1;
+  color: var(--tittle-color);
+  font-family: "Coiny", serif;
+}
+
 button {
   border-radius: 8px;
   border: 1px solid transparent;

@@ -9,7 +9,7 @@ export const NavaBar = () => {
   const date = new Date();
   const day = date.getDay();
   const hour = `${date.getHours() + ":" + date.getMinutes()}`;
-  const week: string[] = [
+  const week = [
     "dimanche",
     "lundi",
     "mardi",
@@ -18,11 +18,14 @@ export const NavaBar = () => {
     "vendredi",
     "samedi",
   ];
-
+  interface IDayList {
+    name: string;
+    firstOpen: string[];
+    secondOpen: string[];
+  }
   useEffect(() => {
     function hourValidator(day: number) {
-      let todayHourly = dataRestaurant.restaurant.horaires[week[day]];
-      console.log(hour > todayHourly.firstOpen[1]);
+      let todayHourly: IDayList = dataRestaurant.restaurant.horaires[day];
       if (hour > todayHourly.firstOpen[0] && hour < todayHourly.firstOpen[1]) {
         setIsOpen(true);
       } else if (
@@ -31,7 +34,7 @@ export const NavaBar = () => {
       ) {
         setIsOpen(true);
       } else {
-        console.log("c'est fermé");
+        setIsOpen(false);
       }
     }
     hourValidator(day);
@@ -39,7 +42,7 @@ export const NavaBar = () => {
 
   return (
     <>
-      <div className="flex px-5 py-8 items-center justify-between">
+      <div className="flex px-8 py-8 items-center justify-between">
         <h1>{dataRestaurant.restaurant.nom}</h1>
         <ul className="flex">
           {NavBarData.map((navItem, key) => {

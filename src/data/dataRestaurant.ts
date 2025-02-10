@@ -3,24 +3,43 @@ export const dataRestaurant = {
     nom: "Tantō",
     adresse: "8 Rue des Lanternes, 75002 Paris",
     telephone: "01 23 45 67 89",
-    horaires: {
-      lundi: { firstOpen: ["12:00", "14:30"], secondOpen: ["19:00", "22:30"] },
-      mardi: { firstOpen: ["12:00", "14:30"], secondOpen: ["19:00", "22:30"] },
-      mercredi: {
-        firstOpen: ["12:00", "14:30"],
-        secondOpen: ["19:00", "22:30"],
-      },
-      jeudi: { firstOpen: ["12:00", "14:30"], secondOpen: ["19:00", "22:30"] },
-      vendredi: {
-        firstOpen: ["12:00", "14:30"],
-        secondOpen: ["19:00", "22:30"],
-      },
-      samedi: { firstOpen: ["12:00", "14:30"], secondOpen: ["19:00", "23:00"] },
-      dimanche: {
+    horaires: [
+      {
+        name: "dimanche",
         firstOpen: ["12:00", "15:00"],
         secondOpen: ["19:00", "22:30"],
       },
-    },
+      {
+        name: "lundi",
+        firstOpen: ["12:00", "14:30"],
+        secondOpen: ["19:00", "22:30"],
+      },
+      {
+        name: "mardi",
+        firstOpen: ["12:00", "14:30"],
+        secondOpen: ["19:00", "22:30"],
+      },
+      {
+        name: "mercredi",
+        firstOpen: ["12:00", "14:30"],
+        secondOpen: ["19:00", "22:30"],
+      },
+      {
+        name: "jeudi",
+        firstOpen: ["12:00", "14:30"],
+        secondOpen: ["19:00", "22:30"],
+      },
+      {
+        name: "vendredi",
+        firstOpen: ["12:00", "14:30"],
+        secondOpen: ["19:00", "22:30"],
+      },
+      {
+        name: "samedi",
+        firstOpen: ["12:00", "14:30"],
+        secondOpen: ["19:00", "23:00"],
+      },
+    ],
     menu: {
       entrees: [
         {
