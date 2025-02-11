@@ -4,6 +4,7 @@
   --tittle-color: orange;
   --text-color: grey;
   background-color: #242424;
+  --font-style: "Coiny", serif;
 
 }
 
@@ -23,14 +24,22 @@ h1 {
   font-size: 3.2em;
   line-height: 1.1;
   color: var(--tittle-color);
-  font-family: "Coiny", serif;
+  font-family: var(--font-style);
 }
 
 h2 {
   font-size: 2.5em;
   line-height: 1.1;
   color: var(--tittle-color);
-  font-family: "Coiny", serif;
+  font-family: var(--font-style);
+}
+
+h3 {
+  font-size: 1.5em;
+  line-height: 1.1;
+  font-weight: bold;
+  color: var(--tittle-color);
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
 }
 
 button {

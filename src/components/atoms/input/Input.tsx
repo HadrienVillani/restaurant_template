@@ -1,7 +1,5 @@
 function Input() {
-  return (
-    <div>Input</div>
-  )
+  return <input type="text" className="border-4 border-amber-600" />;
 }
 
-export default Input
+export default Input;

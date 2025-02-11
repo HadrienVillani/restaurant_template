@@ -6,6 +6,7 @@ function App() {
   return (
     <>
       <NavaBar />
+
       <Routes>
         <Route path="/" element={<Home />} />
       </Routes>

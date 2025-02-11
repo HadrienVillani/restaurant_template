@@ -9,15 +9,7 @@ export const NavaBar = () => {
   const date = new Date();
   const day = date.getDay();
   const hour = `${date.getHours() + ":" + date.getMinutes()}`;
-  const week = [
-    "dimanche",
-    "lundi",
-    "mardi",
-    "mercredi",
-    "jeudi",
-    "vendredi",
-    "samedi",
-  ];
+
   interface IDayList {
     name: string;
     firstOpen: string[];
@@ -42,7 +34,7 @@ export const NavaBar = () => {
 
   return (
     <>
-      <div className="flex px-8 py-8 items-center justify-between">
+      <div className="flex px-8 py-5 items-center justify-between fixed bg-neutral-800 w-full opacity-95 z-10">
         <h1>{dataRestaurant.restaurant.nom}</h1>
         <ul className="flex">
           {NavBarData.map((navItem, key) => {
@@ -53,11 +45,11 @@ export const NavaBar = () => {
         </ul>
         {isOpen ? (
           <div className="px-5 py-3 rounded-lg bg-amber-600">
-            <h4 className="text-white">&#x1F7E2; Notre magasin est ouvert</h4>
+            <h4 className="text-white">&#x1F7E2; Ouvert</h4>
           </div>
         ) : (
           <div className="px-5 py-3 rounded-lg bg-amber-600">
-            <h4 className="text-white">&#128308; Notre magasin est fermé</h4>
+            <h4 className="text-white">&#128308; Fermé</h4>
           </div>
         )}
       </div>
