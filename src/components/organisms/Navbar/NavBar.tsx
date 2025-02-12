@@ -5,7 +5,7 @@ import { useEffect, useState } from "react";
 
 export const NavaBar = () => {
   const [isOpen, setIsOpen] = useState(false);
-
+  const [isTop, setIsTop] = useState(false);
   const date = new Date();
   const day = date.getDay();
   const hour = `${date.getHours() + ":" + date.getMinutes()}`;
@@ -15,6 +15,14 @@ export const NavaBar = () => {
     firstOpen: string[];
     secondOpen: string[];
   }
+  window.addEventListener("scroll", () => {
+    if (window.scrollY === 0) {
+      setIsTop(true);
+      console.log("ok");
+    } else {
+      setIsTop(false);
+    }
+  });
   useEffect(() => {
     function hourValidator(day: number) {
       let todayHourly: IDayList = dataRestaurant.restaurant.horaires[day];
@@ -34,7 +42,11 @@ export const NavaBar = () => {
 
   return (
     <>
-      <div className="flex px-8 py-5 items-center justify-between fixed bg-neutral-800 w-full opacity-95 z-10">
+      <div
+        className={`flex px-8 py-5 w-full items-center justify-between bg-neutral-800 w-full opacity-95 z-10 ${
+          !isTop ? "fixed" : "flex"
+        }`}
+      >
         <h1>{dataRestaurant.restaurant.nom}</h1>
         <ul className="flex">
           {NavBarData.map((navItem, key) => {

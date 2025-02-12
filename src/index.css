@@ -5,11 +5,14 @@
   --text-color: grey;
   background-color: #242424;
   --font-style: "Coiny", serif;
-
 }
 
 a {
   color: var(--tittle-color);
+}
+
+#root {
+  width: 100%;
 }
 
 body {
