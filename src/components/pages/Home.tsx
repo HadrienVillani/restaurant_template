@@ -5,7 +5,6 @@ import { Aside } from "@molecules/nav/aside/Aside";
 import { Container } from "components/organisms/container/Container";
 
 function Home() {
-  const data = dataRestaurant.restaurant.menu;
   return (
     <>
       <section className="w-full h-[95vh] flex items-center justify-center">
@@ -25,8 +24,13 @@ function Home() {
           </p>
         </div>
       </section>
-      <Container>
-        <Aside style="text-white text-center" title="À propos">
+      <Container style="bg-amber-600">
+        <Aside
+          textStyle="text-white text-center"
+          titleStyle="text-white! text-center mb-5"
+          title="À propos"
+          containerStyle=""
+        >
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
             voluptate deleniti provident voluptatum distinctio ipsum molestiae
@@ -76,17 +80,41 @@ function Home() {
           </tbody>
         </table>
       </Container>
-      <Container>
-        <h2 className="text-center">Nos formules</h2>
-        <p className="text-white text-center">
+      <Container style="bg-amber-600" contTextStyle="flex">
+        <Image name="restaurant.avif" style="w-5/6" alt="restaurant" />
+        <Aside
+          title="Tantô restaurant"
+          titleStyle="tewt-white"
+          textStyle="text-white"
+          containerStyle="ml-10 flex flex-col justify-center w-4/5"
+        >
+          <div>
+            <p>
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit. Odit,
+              officiis consequuntur voluptatum nulla nisi cupiditate sapiente
+              repellat beatae, magnam molestiae hic officia praesentium ab
+              necessitatibus quod ad, nesciunt vel doloribus?
+            </p>
+            <p>
+              Lorem ipsum dolor, sit amet consectetur adipisicing elit. Velit
+              totam quis sunt, maxime culpa inventore vitae animi possimus
+              molestias fuga ipsum aliquam accusamus qui temporibus, harum
+              quidem, dicta ea dolorum.
+            </p>
+          </div>
+        </Aside>
+      </Container>
+      <Container style="bg-neutral-100">
+        <h2 className="text-center text-amber-600!">Nos formules</h2>
+        <p className="text-amber-600 text-center">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus
           velit facere obcaecati commodi dicta quod quis provident laboriosam
           odit. Optio, non impedit. Alias dolor debitis obcaecati consequuntur
           optio perferendis hic.
         </p>
         <div className="flex mt-10">
-          <div className="border-t-amber-600 border-t-4 text-white p-10 w-2/4">
-            <h3>Formule du midi</h3>
+          <div className="border-t-amber-600 border-t-4 text-amber-600 p-10 w-2/4">
+            <h3 className="text-amber-600!">Formule du midi</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
               aliquid, ipsam eos odit sequi obcaecati repellendus unde ab
@@ -94,8 +122,8 @@ function Home() {
               tempore suscipit consequatur laboriosam accusantium!
             </p>
           </div>
-          <div className="border-t-amber-600 border-l-amber-600 border-l-4 border-t-4 text-white p-10 w-2/4">
-            <h3>Formule du soir</h3>
+          <div className="border-t-amber-500 border-l-amber-500 border-l-4 border-t-4 text-amber-600 p-10 w-2/4">
+            <h3 className="text-amber-600!">Formule du soir</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro ab
               vitae error vel id rem facilis dolor et libero repellendus odit,
@@ -104,84 +132,8 @@ function Home() {
           </div>
         </div>
       </Container>
-      <Container>
-        <h2 className="text-center">Menu</h2>
-        <div className="grid grid-cols-2 mt-10">
-          <div>
-            <h3>Entrées</h3>
-            {data.entrees.map((flat) => {
-              return (
-                <div>
-                  <h4>{flat.nom}</h4>
-                  <p>{flat.description}</p>
-                  <span>{flat.prix} €</span>
-                </div>
-              );
-            })}
-          </div>
-          <div>
-            <h3>Plats</h3>
-            {data.plats_principaux.map((flat) => {
-              return (
-                <div>
-                  <h4>{flat.nom}</h4>
-                  <p>{flat.description}</p>
-                  <span>{flat.prix} €</span>
-                </div>
-              );
-            })}
-          </div>
-          <div>
-            <h3>Desserts</h3>
-            {data.desserts.map((flat) => {
-              return (
-                <div>
-                  <h4>{flat.nom}</h4>
-                  <p>{flat.description}</p>
-                  <span>{flat.prix} €</span>
-                </div>
-              );
-            })}
-          </div>
-          <div>
-            <h3>Boissons</h3>
-            {data.boissons.map((flat) => {
-              return (
-                <div>
-                  <h4>{flat.nom}</h4>
-                  <p>{flat.description}</p>
-                  <span>{flat.prix} €</span>
-                </div>
-              );
-            })}
-          </div>
-          <div>
-            <h3>Sushis/Sashimis</h3>
-            {data.sushis_sashimis.map((flat) => {
-              return (
-                <div>
-                  <h4>{flat.nom}</h4>
-                  <p>{flat.description}</p>
-                  <span>{flat.prix} €</span>
-                </div>
-              );
-            })}
-          </div>
-          <div>
-            <h3>Accompagnements</h3>
-            {data.accompagnements.map((flat) => {
-              return (
-                <div>
-                  <h4>{flat.nom}</h4>
-                  <p>{flat.description}</p>
-                  <span>{flat.prix} €</span>
-                </div>
-              );
-            })}
-          </div>
-        </div>
-      </Container>
-      <Container>
+
+      <Container style="bg-amber-600">
         <h2>Contact</h2>
         <form action="">
           <label htmlFor="">Nom /Prénom</label>

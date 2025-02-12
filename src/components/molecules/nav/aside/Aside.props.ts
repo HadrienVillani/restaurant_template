@@ -1,5 +1,7 @@
 export interface IAside {
   title: string;
   children: React.ReactNode;
-  style: string;
+  titleStyle: string;
+  textStyle: string;
+  containerStyle: string;
 }

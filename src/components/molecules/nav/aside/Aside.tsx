@@ -2,9 +2,9 @@ import { IAside } from "./Aside.props";
 
 export const Aside = (props: IAside) => {
   return (
-    <aside>
-      <h2 className={`${props.style}`}>{props.title}</h2>
-      <div className={`${props.style}`}>{props.children}</div>
+    <aside className={`${props.containerStyle}`}>
+      <h2 className={`${props.titleStyle}`}>{props.title}</h2>
+      <div className={`${props.textStyle}`}>{props.children}</div>
     </aside>
   );
 };
