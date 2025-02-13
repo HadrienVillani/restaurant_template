@@ -1,5 +1,24 @@
-function Input() {
-  return <input type="text" className="border-4 border-amber-600" />;
-}
+import { IInput } from "./Input.props";
 
-export default Input;
+export const Input: React.FC<IInput> = ({ label, type, inputType }) => {
+  return (
+    <>
+      <div className="flex flex-col my-10 w-full">
+        <label
+          htmlFor=""
+          className="text-lg rounded-lg  uppercase text-white font-bold mb-3"
+        >
+          {label}
+        </label>
+        {type === "input" ? (
+          <input
+            type={inputType}
+            className="rounded-lg border-4 border-white p-3 outline-none cursor white caret-white"
+          />
+        ) : (
+          <textarea className="rounded-lg border-4 border-white p-3 outline-none caret-white" />
+        )}
+      </div>
+    </>
+  );
+};

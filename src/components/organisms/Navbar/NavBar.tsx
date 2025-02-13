@@ -56,11 +56,11 @@ export const NavaBar = () => {
           })}
         </ul>
         {isOpen ? (
-          <div className="px-5 py-3 rounded-lg bg-amber-600">
+          <div className="px-5 py-3 rounded-lg bg-[var(--main-color)]">
             <h4 className="text-white">&#x1F7E2; Ouvert</h4>
           </div>
         ) : (
-          <div className="px-5 py-3 rounded-lg bg-amber-600">
+          <div className="px-5 py-3 rounded-lg bg-[var(--main-color)]">
             <h4 className="text-white">&#128308; Fermé</h4>
           </div>
         )}

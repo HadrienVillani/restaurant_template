@@ -1,7 +1,7 @@
 import { Image } from "@atoms/image/Image";
-import Input from "@atoms/input/Input";
 import { dataRestaurant } from "@data/dataRestaurant";
 import { Aside } from "@molecules/nav/aside/Aside";
+import { Contact } from "components/organisms/contact/Contact";
 import { Container } from "components/organisms/container/Container";
 
 function Home() {
@@ -16,7 +16,7 @@ function Home() {
         />
         <div className="absolute z-3 flex w-3/5 flex-col text-center">
           <h2>Bienvenue sur le site de notre restaurant</h2>
-          <p className="text-white">
+          <p className="text-[var(--white-color)]">
             Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nisi vero,
             culpa fuga dignissimos eius ipsum doloremque accusantium delectus
             aperiam sapiente perspiciatis praesentium, qui exercitationem porro
@@ -24,10 +24,10 @@ function Home() {
           </p>
         </div>
       </section>
-      <Container style="bg-amber-600">
+      <Container style="bg-[var(--main-color)]">
         <Aside
-          textStyle="text-white text-center"
-          titleStyle="text-white! text-center mb-5"
+          textStyle="text-[var(--white-color)] white text-center"
+          titleStyle="text-[var(--white-color)]! text-center mb-5"
           title="À propos"
           containerStyle=""
         >
@@ -48,15 +48,15 @@ function Home() {
       <Container>
         <h2>Horraires</h2>
         <table className="w-full mt-10">
-          <thead className="text-white border-2 rounded">
+          <thead className="text-[var(--white-color)] border-2 rounded">
             <tr className="">
-              <th className="bg-amber-600 p-5 border-6 border-[#242424]">
+              <th className="bg-[var(--main-color)] p-5 border-6 border-[#242424]">
                 Jour
               </th>
-              <th className="bg-amber-600 p-5 border-6 border-[#242424]">
+              <th className="bg-[var(--main-color)] p-5 border-6 border-[#242424]">
                 Horraire du midi
               </th>
-              <th className="bg-amber-600 p-5 border-6 border-[#242424]">
+              <th className="bg-[var(--main-color)] p-5 border-6 border-[#242424]">
                 Horraire du soir
               </th>
             </tr>
@@ -65,13 +65,13 @@ function Home() {
             {dataRestaurant.restaurant.horaires.map((day, key) => {
               return (
                 <tr key={key}>
-                  <th className="bg-neutral-600 text-white p-5 border-6 border-[#242424]">
+                  <th className="bg-neutral-600 text-[var(--white-color)] p-5 border-6 border-[#242424]">
                     {day.name}
                   </th>
-                  <th className="bg-neutral-600 text-white p-5 border-6 border-[#242424]">
+                  <th className="bg-neutral-600 text-[var(--white-color)] p-5 border-6 border-[#242424]">
                     {day.firstOpen[0]} - {day.firstOpen[1]}{" "}
                   </th>
-                  <th className="bg-neutral-600 text-white p-5 border-6 border-[#242424]">
+                  <th className="bg-neutral-600 text-[var(--white-color)] p-5 border-6 border-[#242424]">
                     {day.secondOpen[0]} - {day.secondOpen[1]}{" "}
                   </th>
                 </tr>
@@ -80,12 +80,12 @@ function Home() {
           </tbody>
         </table>
       </Container>
-      <Container style="bg-amber-600" contTextStyle="flex">
+      <Container style="bg-[var(--main-color)]" contTextStyle="flex">
         <Image name="restaurant.avif" style="w-5/6" alt="restaurant" />
         <Aside
           title="Tantô restaurant"
-          titleStyle="tewt-white"
-          textStyle="text-white"
+          titleStyle="text-[var(--white-color)]"
+          textStyle="text-[var(--white-color)]"
           containerStyle="ml-10 flex flex-col justify-center w-4/5"
         >
           <div>
@@ -104,17 +104,17 @@ function Home() {
           </div>
         </Aside>
       </Container>
-      <Container style="bg-neutral-100">
-        <h2 className="text-center text-amber-600!">Nos formules</h2>
-        <p className="text-amber-600 text-center">
+      <Container style="bg-neutral-100" contTextStyle="w-3/5!">
+        <h2 className="text-center text-[var(--main-color)]!">Nos formules</h2>
+        <p className="text-[var(--main-color)] text-center">
           Lorem ipsum dolor sit, amet consectetur adipisicing elit. Temporibus
           velit facere obcaecati commodi dicta quod quis provident laboriosam
           odit. Optio, non impedit. Alias dolor debitis obcaecati consequuntur
           optio perferendis hic.
         </p>
         <div className="flex mt-10">
-          <div className="border-t-amber-600 border-t-4 text-amber-600 p-10 w-2/4">
-            <h3 className="text-amber-600!">Formule du midi</h3>
+          <div className="border-t-[var(--main-color)] border-t-4 text-[var(--main-color)] p-10 w-2/4">
+            <h3 className="text-[var(--main-color)]!">Formule du midi</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquam
               aliquid, ipsam eos odit sequi obcaecati repellendus unde ab
@@ -122,8 +122,8 @@ function Home() {
               tempore suscipit consequatur laboriosam accusantium!
             </p>
           </div>
-          <div className="border-t-amber-500 border-l-amber-500 border-l-4 border-t-4 text-amber-600 p-10 w-2/4">
-            <h3 className="text-amber-600!">Formule du soir</h3>
+          <div className="border-t-[var(--main-color)] border-l-[var(--main-color)] border-l-4 border-t-4 text-[var(--main-color)] p-10 w-2/4">
+            <h3 className="text-[var(--main-color)]!">Formule du soir</h3>
             <p>
               Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro ab
               vitae error vel id rem facilis dolor et libero repellendus odit,
@@ -132,18 +132,7 @@ function Home() {
           </div>
         </div>
       </Container>
-
-      <Container style="bg-amber-600">
-        <h2>Contact</h2>
-        <form action="">
-          <label htmlFor="">Nom /Prénom</label>
-          <Input></Input>
-          <label htmlFor="">Email</label>
-          <Input></Input>
-          <label htmlFor="">Message</label>
-          <Input></Input>
-        </form>
-      </Container>
+      <Contact />
     </>
   );
 }
