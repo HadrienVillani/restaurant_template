@@ -1,8 +1,9 @@
+import { Button } from "@atoms/button/Button";
 import { Image } from "@atoms/image/Image";
-import { dataRestaurant } from "@data/dataRestaurant";
 import { Aside } from "@molecules/nav/aside/Aside";
 import { Contact } from "components/organisms/contact/Contact";
 import { Container } from "components/organisms/container/Container";
+import { ReserveCont } from "components/organisms/reservCont";
 
 function Home() {
   return (
@@ -24,62 +25,6 @@ function Home() {
           </p>
         </div>
       </section>
-      <Container style="bg-[var(--main-color)]">
-        <Aside
-          textStyle="text-[var(--white-color)] white text-center"
-          titleStyle="text-[var(--white-color)]! text-center mb-5"
-          title="À propos"
-          containerStyle=""
-        >
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quibusdam
-            voluptate deleniti provident voluptatum distinctio ipsum molestiae
-            ad! Repellendus sint nesciunt nulla distinctio quibusdam ex,
-            asperiores eos consectetur quos praesentium quidem?
-          </p>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis
-            aperiam eum, natus eligendi non exercitationem quisquam asperiores
-            ipsam officiis maxime ducimus officia sapiente explicabo, voluptas
-            consequuntur harum, quam ipsa ad!
-          </p>
-        </Aside>
-      </Container>
-      <Container>
-        <h2>Horraires</h2>
-        <table className="w-full mt-10">
-          <thead className="text-[var(--white-color)] border-2 rounded">
-            <tr className="">
-              <th className="bg-[var(--main-color)] p-5 border-6 border-[#242424]">
-                Jour
-              </th>
-              <th className="bg-[var(--main-color)] p-5 border-6 border-[#242424]">
-                Horraire du midi
-              </th>
-              <th className="bg-[var(--main-color)] p-5 border-6 border-[#242424]">
-                Horraire du soir
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            {dataRestaurant.restaurant.horaires.map((day, key) => {
-              return (
-                <tr key={key}>
-                  <th className="bg-neutral-600 text-[var(--white-color)] p-5 border-6 border-[#242424]">
-                    {day.name}
-                  </th>
-                  <th className="bg-neutral-600 text-[var(--white-color)] p-5 border-6 border-[#242424]">
-                    {day.firstOpen[0]} - {day.firstOpen[1]}{" "}
-                  </th>
-                  <th className="bg-neutral-600 text-[var(--white-color)] p-5 border-6 border-[#242424]">
-                    {day.secondOpen[0]} - {day.secondOpen[1]}{" "}
-                  </th>
-                </tr>
-              );
-            })}
-          </tbody>
-        </table>
-      </Container>
       <Container style="bg-[var(--main-color)]" contTextStyle="flex">
         <Image name="restaurant.avif" style="w-5/6" alt="restaurant" />
         <Aside
@@ -132,6 +77,7 @@ function Home() {
           </div>
         </div>
       </Container>
+      <ReserveCont />
       <Contact />
     </>
   );

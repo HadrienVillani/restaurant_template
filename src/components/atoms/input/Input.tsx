@@ -3,7 +3,7 @@ import { IInput } from "./Input.props";
 export const Input: React.FC<IInput> = ({ label, type, inputType }) => {
   return (
     <>
-      <div className="flex flex-col my-10 w-full">
+      <div className="flex flex-col my-5 w-full">
         <label
           htmlFor=""
           className="text-lg rounded-lg  uppercase text-white font-bold mb-3"
