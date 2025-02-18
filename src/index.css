@@ -6,7 +6,6 @@
 :root {
   --tittle-color: orange;
   --text-color: grey;
-  background-color: #242424;
   --font-style: "Coiny", serif;
   --main-color: #e17100;
   --white-color: white;
@@ -47,8 +46,16 @@ h3 {
   font-size: 1.5em;
   line-height: 1.1;
   font-weight: bold;
-  color: var(--tittle-color);
+  font-family: var(--font-style);
+}
+
+h4 {
   font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-size: 1em;
+  line-height: 1.1;
+  font-family: var(--font-style);
+  margin-bottom: 0.1em;
+  margin-top: 0.8em;
 }
 
 button:focus,

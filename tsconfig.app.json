@@ -28,7 +28,8 @@
       "@molecules/*": ["components/molecules/*"],
       "@pages/*": ["components/pages/*"],
       "@api/*": ["api/*"],
-      "@data/*" :["data/*"]
+      "@data/*" :["data/*"],
+      "@images/*":["assets/images/*"]
     },
   },
   "include": ["src"]
