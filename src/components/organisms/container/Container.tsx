@@ -10,6 +10,8 @@ export const Container = (props: IContainer) => {
         style={{
           backgroundImage: `url(${props.img})`,
           backgroundPosition: "center",
+          backgroundAttachment: "fixed",
+          backgroundSize: "cover",
         }}
         className={`w-full flex items-center justify-center py-20 ${props.style}`}
       >

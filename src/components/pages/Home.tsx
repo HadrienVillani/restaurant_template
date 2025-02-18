@@ -49,7 +49,9 @@ function Home() {
         </Aside>
       </Container>
       <Container img={cooker} contTextStyle="w-3/5!">
-        <h2 className="text-center text-[var(--main-color)]!">Nos formules</h2>
+        <div className="w-full bg-[var(--main-color)] p-5">
+          <h2 className="text-center text-white!">Nos formules</h2>
+        </div>
         <div className="flex mt-10]">
           <div className="bg-[var(--main-color)] text-[var(--white-color)]! p-10 w-2/4 flex justify-between flex-col">
             <div>
@@ -79,13 +81,13 @@ function Home() {
                 <li>soft</li>
               </ul>
             </div>
-            <div className="w-full flex items-center justify-center bg-white p-5 mt-10 text-[var(--main-color)]">
-              <h4>Prix : 14,90€</h4>
+            <div className="w-full flex items-center justify-center p-5 mt-10">
+              <h4 className="text-3xl!">14,90€</h4>
             </div>
           </div>
-          <div className="border-[var(--main-color)] border-4 border-t-4 text-[var(--main-color)] p-10 w-2/4">
+          <div className="text-white p-10 w-2/4 bg-[var(--main-color)]">
             <div className="flex flex-col justify-between">
-              <h3 className="text-[var(--main-color)]!">Formule du soir</h3>
+              <h3 className="text-white!">Formule du soir</h3>
               <h4>Entrée au choix :</h4>
               <ul>
                 <li>Nems végétariens ou au porc</li>
@@ -122,8 +124,8 @@ function Home() {
                 <li>Bière asiatique (Singha, Asahi) ou vin (au choix)</li>
               </ul>
             </div>
-            <div className="w-full flex items-center justify-center bg-[var(--main-color)] p-5 mt-10 text-white">
-              <h4>Prix : 25€</h4>
+            <div className="w-full flex items-center justify-center p-5 mt-10 text-white">
+              <h4 className="text-3xl!">25€</h4>
             </div>
           </div>
         </div>
